@@ -26,3 +26,10 @@ Plusieurs événements et animations artistiques vont être organisés dans diff
 - Des expositions : une septantaine d’artistes exposeront dans des lieux emblématiques du quartier ou ouvriront leurs ateliers.
 - Des œuvres dans l’espace urbain : les visiteurs seront invités à découvrir différentes œuvres et/ou animations, se déroulant sur l’espace public, tout au long du parcours.
 - Une ambiance musicale conviviale : concerts, spectacles, bal aux lampions,...
+
+## Liens relatifs 
+
+- [Vidéo de présentation](http://lencreuse.be/video-de-presentation-saint-leonart/)
+- [Page Facebook](https://www.facebook.com/Saint.Leon.Art/)
+- [Description édition 2018](http://www.saint-leonard.be/2017/09/15/saint-leonart-projet/)
+- [Programme édition 2017](https://www.dropbox.com/s/rsp1zhll9u8amtt/138_saint_leonart_programme_6.pdf)
