@@ -27,6 +27,56 @@ Plusieurs événements et animations artistiques vont être organisés dans diff
 - Des œuvres dans l’espace urbain : les visiteurs seront invités à découvrir différentes œuvres et/ou animations, se déroulant sur l’espace public, tout au long du parcours.
 - Une ambiance musicale conviviale : concerts, spectacles, bal aux lampions,...
 
+## Plan du site
+
+ - Accueil
+    - Présentation événement mise en avant date et lieux
+    - Présentation de quelques artistes au hasard
+    - Dernières news
+    - Inscription à la news letter
+    - Partie de la programmation (Dates les plus proches)
+    - Les réseaux sociaux
+    - Fil de photos (Instagram)
+- Programme
+    - Expositions parcours artistique
+    - Concerts, spectacles
+    - Oeuvres dans l'espace urbain
+    - Evénements divers
+    - Artistes participants
+- Profile d'un artiste
+    - Adresse 
+    - Téléphone
+    - E-mail
+    - Site web
+    - Facebook
+    - Twitter
+    - Instagram
+    - Linkedin
+- Agenda
+    - Agenda global trier par jour et type d'événement
+- En pratique
+    - Infos pratiques
+    - Les lieux
+    - Les accès
+    - Parkings
+    - Transports en communs
+    - Autres infos importantes
+- News/Actu
+    - Toute l'actualité trier par catégories/dates de publications
+- A propos
+    - Présentation de l'événement
+    - Présentation des organisateurs
+    - Parler des éditions précendentes
+    - Résumé en chiffre des éditions précédentes
+- Partenaires
+    - Affichage des logos des sponsors
+    - Liens vers sites ou réseaux sociaux
+- Contact
+    - Coordonnées de l'ASBL organisatrice
+    - Formulaire de contact
+    - Informations générales
+
+
 ## Liens relatifs 
 
 - [Vidéo de présentation](http://lencreuse.be/video-de-presentation-saint-leonart/)
