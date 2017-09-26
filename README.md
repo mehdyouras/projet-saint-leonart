@@ -52,6 +52,11 @@ Plusieurs événements et animations artistiques vont être organisés dans diff
     - Twitter
     - Instagram
     - Linkedin
+- Page d'un parcours artistique/exposition
+    - Adresse
+    - Des images
+    - Réseaux sociaux
+    - Contact
 - Agenda
     - Agenda global trier par jour et type d'événement
 - En pratique
