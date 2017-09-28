@@ -73,6 +73,7 @@ Plusieurs événements et animations artistiques vont être organisés dans diff
     - Présentation des organisateurs
     - Parler des éditions précendentes
     - Résumé en chiffre des éditions précédentes
+    - Espace presse
 - Partenaires
     - Affichage des logos des sponsors
     - Liens vers sites ou réseaux sociaux
