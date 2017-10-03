@@ -27,6 +27,26 @@ Plusieurs événements et animations artistiques vont être organisés dans diff
 - Des œuvres dans l’espace urbain : les visiteurs seront invités à découvrir différentes œuvres et/ou animations, se déroulant sur l’espace public, tout au long du parcours.
 - Une ambiance musicale conviviale : concerts, spectacles, bal aux lampions,...
 
+## Liste de disciplines artistique représentées
+
+  - Arts Visuels
+  - Arts de rue
+  - Collages
+  - Design & Mode
+  - Dessin
+  - Eco/Recup
+  - Graphisme
+  - Gravure
+  - Illustration
+  - Installation
+  - Musique
+  - Peinture
+  - Photographie
+  - Scénographie
+  - Sculpture
+  - Sérigraphie
+  - Théâtre
+
 ## Plan du site
 
  - Accueil
