@@ -1,2 +1,9 @@
 
 \.DS_Store
+dev/wp-content/themes/leon-art/assets/*
+dev/wp-content/themes/leon-art/node_modules/
+
+\.idea/
+
+dev/wp-content/themes/leon-art/*.php
+!dev/wp-content/themes/leon-art/src/*
