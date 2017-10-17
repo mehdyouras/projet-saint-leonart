@@ -77,6 +77,7 @@
 // SETTINGS
 @import "../../node_modules/inuitcss/settings/settings.core";
 @import "settings/settings.fonts";
+@import "settings/settings.colors";
 
 
 // TOOLS
@@ -134,6 +135,8 @@
 // Build and include your project’s UI Compoments here.
 // @import "../../node_modules/inuitcss/components/example.components.buttons";
 @import "components/components.card";
+@import "components/components.footer";
+@import "components/components.nav";
 
 
 
