@@ -1,0 +1,16 @@
+.c-nav {
+  @include inuit-font-size(24px);
+  text-transform: uppercase;
+  &--footer {
+    display: flex;
+    flex-direction: column;
+    .c-nav__item {
+      padding: $inuit-global-spacing-unit-small 0;
+      color: $purple;
+    }
+  }
+  &__item {
+    text-decoration: none;
+    font-family: $oswald;
+  }
+}

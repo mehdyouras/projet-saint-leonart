@@ -1,0 +1,18 @@
+.c-footer {
+  background: $yellow;
+  &__nav {
+
+  }
+  &__socials {
+    background: $purple;
+  }
+  &__copyright {
+    color: white;
+    background: $red;
+    text-align: center;
+    @include inuit-font-size(12px);
+    a {
+      color: white;
+    }
+  }
+}
