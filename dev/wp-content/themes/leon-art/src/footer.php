@@ -29,7 +29,7 @@
             </li>
         </ul>
         <div>
-            <h2 class="c-colorblock__title">S'inscrire à la newsletter</h2>
+            <h3 class="c-colorblock__title">S'inscrire à la newsletter</h3>
             <?php get_template_part('part', 'newsletter'); ?>
         </div>
     </div>
