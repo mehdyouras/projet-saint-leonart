@@ -32,11 +32,7 @@ get_header();
     </section>
     <section class="o-box c-colorblock">
         <h2 class="c-colorblock__title">S'inscrire à la newsletter</h2>
-        <form action="post">
-            <label for="email">Adresse email</label>
-            <input type="email">
-            <input type="submit" value="S'inscrire">
-        </form>
+        <?php get_template_part('part', 'newsletter'); ?>
     </section>
     <section class="o-box c-colorblock">
         <h2>Nos réseaux sociaux</h2>
