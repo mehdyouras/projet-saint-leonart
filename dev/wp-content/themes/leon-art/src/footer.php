@@ -1,13 +1,13 @@
-<footer class="c-footer">
-    <nav class="c-footer__nav c-nav--footer">
-        <a href="#" class="nav__item">Accueil</a>
-        <a href="#" class="nav__item">Programme</a>
-        <a href="#" class="nav__item">Artistes</a>
-        <a href="#" class="nav__item">Agenda</a>
-        <a href="#" class="nav__item">En pratique</a>
-        <a href="#" class="nav__item">Actualités</a>
-        <a href="#" class="nav__item">Partenaires</a>
-        <a href="#" class="nav__item">Nous contacter</a>
+<footer class="c-footer o-box">
+    <nav class="c-footer__nav c-nav c-nav--footer">
+        <a href="#" class="c-nav__item">Accueil</a>
+        <a href="#" class="c-nav__item">Programme</a>
+        <a href="#" class="c-nav__item">Artistes</a>
+        <a href="#" class="c-nav__item">Agenda</a>
+        <a href="#" class="c-nav__item">En pratique</a>
+        <a href="#" class="c-nav__item">Actualités</a>
+        <a href="#" class="c-nav__item">Partenaires</a>
+        <a href="#" class="c-nav__item">Nous contacter</a>
     </nav>
     <ul class="c-footer__partners">
         <li>
