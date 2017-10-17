@@ -2,10 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i,700');
 
+$oswald : Oswald, sans-serif;
+$roboto : Roboto, sans-serif;
+
 * {
-  font-family: Roboto, sans-serif;
+  font-family: $roboto;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: Oswald, sans-serif;
+  font-family: $oswald;
 }
+
