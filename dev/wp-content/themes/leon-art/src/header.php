@@ -12,12 +12,12 @@
 </head>
 <body>
 <header class="o-layout">
-    <div class="o-layout__item c-hamburger c-hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+    <div class="o-layout__item c-hamburger c-hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
         <div class="c-hamburger-box">
             <div class="c-hamburger-inner"></div>
         </div>
     </div>
-    <nav id="nav">
+    <nav class="o-layout__item" id="nav">
         <a href="#" class="c-nav__item">Accueil</a>
         <a href="#" class="c-nav__item">Programme</a>
         <a href="#" class="c-nav__item">Artistes</a>
