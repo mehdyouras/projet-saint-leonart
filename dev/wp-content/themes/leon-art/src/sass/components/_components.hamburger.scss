@@ -37,17 +37,15 @@ $hamburger-types: (
 // Hamburger
 // ==================================================
 .c-hamburger {
-  padding: $hamburger-padding-y $hamburger-padding-x;
+  padding-top: $inuit-global-spacing-unit;
   display: inline-block;
   cursor: pointer;
-
   transition-property: opacity, filter;
-  transition-duration: $hamburger-hover-transition-duration;
+  //transition-duration: $hamburger-hover-transition-duration;
   transition-timing-function: $hamburger-hover-transition-timing-function;
 
   // Normalize (<button>)
   font: inherit;
-  color: inherit;
   text-transform: none;
   background-color: transparent;
   border: 0;
@@ -56,10 +54,25 @@ $hamburger-types: (
 
   &:hover {
     @if $hamburger-hover-use-filter == true {
-      filter: $hamburger-hover-filter;
+      //filter: $hamburger-hover-filter;
     }
     @else {
-      opacity: $hamburger-hover-opacity;
+      //opacity: $hamburger-hover-opacity;
+    }
+  }
+  &__nav {
+    position: static;
+    left: -100%;
+    background: $yellow;
+    transition: 0.2s;
+  }
+  &.is-active {
+    background: $purple;
+    & .c-hamburger-inner, & .c-hamburger-inner:after, & .c-hamburger-inner:before {
+      background: white;
+    }
+    & .c-hamburger__nav {
+      left: 0;
     }
   }
 }
@@ -69,6 +82,7 @@ $hamburger-types: (
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
   display: inline-block;
   position: relative;
+  padding: $inuit-global-spacing-unit;
 }
 
 .c-hamburger-inner {
