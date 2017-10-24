@@ -16,15 +16,16 @@
         <div class="c-hamburger-box">
             <div class="c-hamburger-inner"></div>
         </div>
+        <nav class="o-layout__item o-box c-hamburger__nav c-nav" id="nav">
+            <a href="#" class="c-nav__item">Accueil</a>
+            <a href="#" class="c-nav__item">Programme</a>
+            <a href="#" class="c-nav__item">Artistes</a>
+            <a href="#" class="c-nav__item">Agenda</a>
+            <a href="#" class="c-nav__item">En pratique</a>
+            <a href="#" class="c-nav__item">à propos</a>
+        </nav>
     </div>
-    <nav class="o-layout__item" id="nav">
-        <a href="#" class="c-nav__item">Accueil</a>
-        <a href="#" class="c-nav__item">Programme</a>
-        <a href="#" class="c-nav__item">Artistes</a>
-        <a href="#" class="c-nav__item">Agenda</a>
-        <a href="#" class="c-nav__item">En pratique</a>
-        <a href="#" class="c-nav__item">à propos</a>
-    </nav>
+
     <div class="o-layout__item c-brand c-brand--home">
         <div class="c-brand__logos">
             <img src="<?php sl_asset('img/logo.svg'); ?>" alt="Logo du festival Saint Léon'art">
