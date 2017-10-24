@@ -43,13 +43,9 @@ gulp.task("css", function() {
 // --- Task for js
 gulp.task("js", function() {
     gulp.src("src/js/**/*.js")
-        .pipe(babel({
-            only : "script.js",
-        }))
+        .pipe(babel())
         .pipe(concat('script.js'))
         .pipe(gulp.dest("assets/js"));
-    gulp.src("node_modules/jquery/dist/jquery.slim.min.js").
-        pipe(gulp.dest("assets/js"));
 });
 
 // -- Task for fonts
