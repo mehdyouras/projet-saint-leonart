@@ -43,4 +43,5 @@
     <div class="o-box o-box--small c-footer__copyright">
         <p>© 2017 <a href="http://mehdy.ouras.be">Mehdy Ouras</a></p>
     </div>
+    <script src="<?php sl_asset('js/script.js'); ?>"></script>
 </footer>
