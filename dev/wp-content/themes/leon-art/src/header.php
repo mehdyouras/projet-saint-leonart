@@ -11,7 +11,7 @@
     <![endif]-->
 </head>
 <body>
-<header class="o-layout c-header">
+<header class="o-layout c-header u-padding-bottom">
     <div class="o-layout__item c-hamburger c-hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
         <div class="c-hamburger-box">
             <div class="c-hamburger-inner"></div>
