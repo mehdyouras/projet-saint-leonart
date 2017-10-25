@@ -7,14 +7,30 @@ const fHamburgerMenu = function() {
 
     $hamburgerNav.style.position = 'absolute';
 
-    $hamburger.addEventListener("focus", function() {
-        $hamburger.classList.toggle("is-active");
+    $hamburger.addEventListener("click", function() {
         if($hamburger.classList.contains("is-active")) {
-            $hamburgerNav.style.left = "0";
-        } else {
+            $hamburger.classList.remove("is-active");
             $hamburgerNav.style.left = "-100%";
+        } else {
+            $hamburger.classList.add("is-active");
+            $hamburgerNav.style.left = "0";
         }
     });
+
+    window.addEventListener("keydown", function(e) {
+        if(e.keyCode === 9) {
+            console.log('test');
+            document.querySelector(".c-hamburger .c-nav__item:last-child").addEventListener('blur', function() {
+                $hamburger.classList.remove("is-active");
+                $hamburgerNav.style.left = "-100%";
+            });
+            $hamburger.addEventListener("focus", function() {
+                $hamburger.classList.add("is-active");
+                $hamburgerNav.style.left = "0";
+            });
+        }
+    });
+
 
     $hamburger.addEventListener("blur", function() {
         $hamburerNavItem.addEventListener("blur", function() {
