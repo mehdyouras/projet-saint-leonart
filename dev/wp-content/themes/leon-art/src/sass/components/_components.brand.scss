@@ -19,6 +19,9 @@
         @include inuit-font-size(24px);
         display: block;
       }
+      &__cta-container {
+        display: flex;
+      }
     }
   }
 }

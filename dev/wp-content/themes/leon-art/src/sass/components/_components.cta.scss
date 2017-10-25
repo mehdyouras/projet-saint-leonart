@@ -1,3 +1,17 @@
 .c-cta {
-
+  display: inline-block;
+  padding: $inuit-global-spacing-unit-small;
+  font-family: $oswald;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include inuit-font-size(24px);
+  margin: auto;
+  &--main {
+    background: $yellow;
+    color: $purple;
+  }
+  &--second {
+    background: $red;
+    color: white;
+  }
 }
