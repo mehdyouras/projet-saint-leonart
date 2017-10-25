@@ -11,7 +11,7 @@
     <![endif]-->
 </head>
 <body>
-<header class="o-layout">
+<header class="o-layout c-header">
     <div class="o-layout__item c-hamburger c-hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
         <div class="c-hamburger-box">
             <div class="c-hamburger-inner"></div>
@@ -28,13 +28,12 @@
 
     <div class="o-layout__item c-brand c-brand--home">
         <div class="c-brand__logos">
-            <img src="<?php sl_asset('img/logo.svg'); ?>" alt="Logo du festival Saint Léon'art">
-            <img src="<?php sl_asset('img/logo-text.svg'); ?>" alt="Saint Léon'art">
+            <img class="c-brand__logo o-box" src="<?php sl_asset('img/logo.svg'); ?>" alt="Logo du festival Saint Léon'art">
+            <img class="c-brand__text-logo" src="<?php sl_asset('img/logo-text.svg'); ?>" alt="Saint Léon'art">
         </div>
         <div class="c-brand__details">
             <h1>Saint Léon'art</h1>
-            <p class="c-brand__dates">28 - 30 septembre 2018</p>
-            <p class="c-brand__location">Quartier Saint Léonard à Liège</p>
+            <p><span class="c-brand__dates">28 - 30 septembre 2018</span> <span class="c-brand__location">Quartier Saint Léonard à Liège</span></p>
         </div>
         <div class="c-brand__cta-container">
             <a href="#" class="c-cta c-cta--main">Programme</a>
