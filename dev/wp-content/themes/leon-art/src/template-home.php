@@ -9,7 +9,7 @@ get_header();
     <section class="o-wrapper u-margin-bottom-large">
         <h2 class="c-section__title">Quelques artistes présents</h2>
         <div class="c-card c-home__artists o-box o-box--small">
-            <ul class="c-artists">
+            <ul class="c-person c-person--home">
                 <?php get_template_part('part', 'artist-excerpt'); ?>
             </ul>
             <a href="#" class="c-cta c-cta--second">Voir tous les artistes</a>

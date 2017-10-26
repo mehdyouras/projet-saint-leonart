@@ -1,7 +1,44 @@
-<li class="c-artists__item">
+<li class="c-person__item">
     <a href="#">
-        <img src="#" alt="Portrait de l'artiste">
-        <p class="c-artists__name">Jean Dujardin</p>
-        <p class="c-artistes__type">Peintre</p>
+        <div class="o-circle">
+            <img class="c-person__img" src="<?php sl_asset('img/avatar.jpg'); ?>" alt="Portrait de l'artiste">
+        </div>
+        <p class="c-person__details">
+            <span class="c-person__name">Jean Dujardin</span>
+            <span class="c-person__type">Peintre</span>
+        </p>
+    </a>
+</li>
+<li class="c-person__item">
+    <a href="#">
+        <div class="o-circle">
+            <img class="c-person__img" src="<?php sl_asset('img/avatar.jpg'); ?>" alt="Portrait de l'artiste">
+        </div>
+        <p class="c-person__details">
+            <span class="c-person__name">Jean Dujardin</span>
+            <span class="c-person__type">Peintre</span>
+        </p>
+    </a>
+</li>
+<li class="c-person__item">
+    <a href="#">
+        <div class="o-circle">
+            <img class="c-person__img" src="<?php sl_asset('img/avatar.jpg'); ?>" alt="Portrait de l'artiste">
+        </div>
+        <p class="c-person__details">
+            <span class="c-person__name">Jean Dujardin</span>
+            <span class="c-person__type">Peintre</span>
+        </p>
+    </a>
+</li>
+<li class="c-person__item">
+    <a href="#">
+        <div class="o-circle">
+            <img class="c-person__img" src="<?php sl_asset('img/avatar.jpg'); ?>" alt="Portrait de l'artiste">
+        </div>
+        <p class="c-person__details">
+            <span class="c-person__name">Jean Dujardin</span>
+            <span class="c-person__type">Peintre</span>
+        </p>
     </a>
 </li>

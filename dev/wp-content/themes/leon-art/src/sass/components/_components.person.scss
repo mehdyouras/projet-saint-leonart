@@ -1,0 +1,33 @@
+.c-person {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left: 0;
+  &__item {
+    text-align: center;
+    display: inline-block;
+    &:nth-child(odd) {
+      margin-right: $inuit-global-spacing-unit;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  &__img {
+  }
+  &__details {
+    span {
+      display: block;
+    }
+  }
+  &__name {
+    font-family: $oswald;
+    @include inuit-font-size(18px);
+  }
+  &__type {
+    font-family: $oswald;
+    @include inuit-font-size(16px);
+  }
+}
