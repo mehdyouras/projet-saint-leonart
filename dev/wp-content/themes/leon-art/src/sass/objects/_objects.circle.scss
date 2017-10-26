@@ -1,0 +1,9 @@
+.o-circle {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  text-align: center;
+  background: grey;
+  margin-bottom: $inuit-global-spacing-unit-small;
+}
