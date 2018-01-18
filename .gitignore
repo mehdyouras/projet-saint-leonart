@@ -1,6 +1,6 @@
 
 \.DS_Store
-dev/wp-content/themes/saint-leonart/assets/*
+dev/wp-content/themes/saint-leonart/dist/*
 dev/wp-content/themes/saint-leonart/node_modules
 
 \.idea/
