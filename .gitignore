@@ -7,3 +7,9 @@ node_modules
 
 /*.php
 !./src/*
+
+.DS_Store
+bower_components
+node_modules
+npm-debug.log
+css

@@ -8,6 +8,27 @@ csso = require("gulp-csso"),
 babel = require("gulp-babel"),
 concat = require("gulp-concat");
 
+var $    = require('gulp-load-plugins')();
+
+var sassPaths = [
+  'bower_components/normalize.scss/sass',
+  'bower_components/foundation-sites/scss',
+  'bower_components/motion-ui/src'
+];
+
+gulp.task('css', function() {
+  return gulp.src('src/scss/app.scss')
+    .pipe($.sass({
+      includePaths: sassPaths,
+      outputStyle: 'compressed' // if css compressed **file size**
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 9']
+    }))
+    .pipe(gulp.dest('assets/css'));
+});
+
 // --- Task for images
 gulp.task("images", function() {
 gulp.src("src/img/**", !"src/img/*.db")
@@ -34,13 +55,13 @@ gulp.src("src/**/*.php")
 //     .pipe(gulp.dest("assets/"));
 // });
 // --- Task for styles
-gulp.task("css", function() {
-gulp.src("src/sass/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer())
-    .pipe(csso())
-    .pipe(gulp.dest("assets/css"));
-});
+// gulp.task("css", function() {
+// gulp.src("src/sass/**/*.scss")
+//     .pipe(sass().on("error", sass.logError))
+//     .pipe(autoprefixer())
+//     .pipe(csso())
+//     .pipe(gulp.dest("assets/css"));
+// });
 // --- Task for js
 gulp.task("js", function() {
 gulp.src("src/js/**/*.js")
