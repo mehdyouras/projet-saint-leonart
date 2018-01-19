@@ -13,6 +13,7 @@
                     <a href="<?= $item->link ?>"><?= $item->label ?></a>
                 </li>
             <?php endforeach; ?>
+            </ul>
         </div>
     </div>
 </nav>
