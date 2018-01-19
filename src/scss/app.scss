@@ -11,6 +11,9 @@
   "secondary": #FEC947
 );
 
+$font-family-sans-serif: Roboto, sans-serif;
+$headings-font-family: Oswald, $font-family-sans-serif;
+
  @import "settings/settings.fonts";
  @import "../../node_modules/bootstrap/scss/functions";
  @import "../../node_modules/bootstrap/scss/variables";

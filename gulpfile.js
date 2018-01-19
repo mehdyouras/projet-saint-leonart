@@ -85,9 +85,9 @@ gulp.src("src/js/**/*.js")
     }))
     .pipe(concat('app.js'))
     .pipe(gulp.dest("assets/js"));
-gulp.src("bower_components/jquery/dist/jquery.slim.min.js").
+gulp.src("node_modules/jquery/dist/jquery.slim.min.js").
     pipe(gulp.dest("assets/js"));
-gulp.src("bower_components/bootstrap/dist/js/bootstrap.bundle.min.js").
+gulp.src("node_modules/bootstrap/dist/js/bootstrap.bundle.min.js").
     pipe(gulp.dest("assets/js"));
 });
 
