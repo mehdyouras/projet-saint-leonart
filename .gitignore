@@ -1,9 +1,9 @@
 
 \.DS_Store
-dev/wp-content/themes/saint-leonart/dist/*
-dev/wp-content/themes/saint-leonart/node_modules
+assets/*
+node_modules
 
 \.idea/
 
-dev/wp-content/themes/saint-leonart/*.php
-!dev/wp-content/themes/saint-leonart/src/*
+./*.php
+!./src/*
