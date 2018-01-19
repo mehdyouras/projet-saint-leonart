@@ -6,7 +6,8 @@ sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
 csso = require("gulp-csso"),
 babel = require("gulp-babel"),
-concat = require("gulp-concat");
+concat = require("gulp-concat"),
+browserSync = require('browser-sync');
 
 var $    = require('gulp-load-plugins')();
 
@@ -15,6 +16,19 @@ var sassPaths = [
   'bower_components/foundation-sites/scss',
   'bower_components/motion-ui/src'
 ];
+
+gulp.task('browser-sync', function() {
+    browserSync({
+        host: '192.168.10.10',
+        proxy: "saint-leonart.app",
+        files: '*.php',
+        port: 3001,
+        open: false,
+    })
+    // gulp.watch("*.php").on("change", browserSync.reload);
+
+})
+
 
 gulp.task('css', function() {
   return gulp.src('src/scss/app.scss')
@@ -26,7 +40,8 @@ gulp.task('css', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('assets/css'))
+    .pipe(browserSync.stream());
 });
 
 // --- Task for images
@@ -89,5 +104,5 @@ gulp.watch("src/js/**", ["js"]);
 gulp.watch("src/*.php", ["php"]);
 });
 // --- Aliases
-gulp.task("default", ["css", "js", "images", "fonts","php"]);
+gulp.task("default", ["browser-sync", "css", "js", "images", "fonts","php"]);
 gulp.task("work", ["default", "watch"]);
