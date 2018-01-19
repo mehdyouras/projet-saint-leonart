@@ -18,6 +18,7 @@ function sla_asset($resource) {
 }
 
 register_nav_menu('header', 'Menu principale affiché dans le header');
+
 function sla_get_nav_items($location) {
     // récupérer les items du menu $location et les transformer en un objet contenant $link et $label
     $id = sla_get_nav_id($location);
@@ -43,6 +44,7 @@ function sla_get_nav_items($location) {
     }
     return $nav;
 }
+
 // Get menu ID from location
 function sla_get_nav_id($location) {
     $id = false;
@@ -52,4 +54,20 @@ function sla_get_nav_id($location) {
         }
     }
     return false;
+}
+
+
+/**
+ * Returns if nav item is active (bool)
+ */
+function sla_is_active($link, $current_url) {
+    // turns $link into regex
+    $urlRegex = '/^'.str_replace('/','\/', $link).'/';
+    // checks if $link is in $current_url and if it is not site root
+    $is_active = (preg_match($urlRegex, $current_url) && $link != get_site_url().'/');
+    // if $link is root AND $current_url is root then it is active
+    if(($link === get_site_url().'/') && ($current_url === get_site_url().'/')) {
+        $is_active = true;
+    }
+    return $is_active;
 }
