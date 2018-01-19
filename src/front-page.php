@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section>
-    <h2 class="show-for-sr">Contenu principal</h2>
+    <h2 class="sr-only">Contenu principal</h2>
     <section>
         <h3>Quelques artistes présents</h3>
         <div>
