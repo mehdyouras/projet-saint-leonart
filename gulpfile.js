@@ -1,7 +1,7 @@
 
 var gulp = require("gulp"),
 image = require("gulp-imagemin"),
-pug = require("gulp-pug"),
+// pug = require("gulp-pug"),
 sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
 csso = require("gulp-csso"),
@@ -25,14 +25,14 @@ gulp.src("src/**/*.php")
     .pipe(gulp.dest("."));
 });
 
-// --- Task for pug
-gulp.task("html", function() {
-gulp.src(["src/pug/**/*.pug", "!src/pug/partials/**/*.pug"])
-    .pipe(pug({
-        pretty: false
-    }))
-    .pipe(gulp.dest("assets/"));
-});
+// // --- Task for pug
+// gulp.task("html", function() {
+// gulp.src(["src/pug/**/*.pug", "!src/pug/partials/**/*.pug"])
+//     .pipe(pug({
+//         pretty: false
+//     }))
+//     .pipe(gulp.dest("assets/"));
+// });
 // --- Task for styles
 gulp.task("css", function() {
 gulp.src("src/sass/**/*.scss")
