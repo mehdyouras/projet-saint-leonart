@@ -21,7 +21,7 @@ gulp.task('browser-sync', function() {
     browserSync({
         host: '192.168.10.10',
         proxy: "saint-leonart.app",
-        files: '*.php',
+        files: ['*.php', '*.scss'],
         port: 3001,
         open: false,
     })
@@ -98,7 +98,7 @@ gulp.src("src/fonts/**")
 // --- Watch tasks
 gulp.task("watch", function() {
 gulp.watch("src/img/**", ["images"]);
-gulp.watch("src/sass/**", ["css"]);
+gulp.watch("src/scss/**", ["css"]);
 gulp.watch("src/pug/**", ["html"]);
 gulp.watch("src/js/**", ["js"]);
 gulp.watch("src/*.php", ["php"]);
