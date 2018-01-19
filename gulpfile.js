@@ -81,11 +81,15 @@ gulp.src("src/**/*.php")
 gulp.task("js", function() {
 gulp.src("src/js/**/*.js")
     .pipe(babel({
-        only : "script.js",
+        only : "app.js",
     }))
-    .pipe(concat('script.js'))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest("assets/js"));
-gulp.src("node_modules/jquery/dist/jquery.slim.min.js").
+gulp.src("bower_components/jquery/dist/jquery.slim.min.js").
+    pipe(gulp.dest("assets/js"));
+gulp.src("bower_components/what-input/dist/what-input.min.js").
+    pipe(gulp.dest("assets/js"));
+gulp.src("bower_components/foundation-sites/dist/js/foundation.min.js").
     pipe(gulp.dest("assets/js"));
 });
 

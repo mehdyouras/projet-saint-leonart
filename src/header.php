@@ -14,5 +14,5 @@
 </head>
 <body>
     <header>
-        <p>Test</p>
+        <?php get_template_part('part', 'navbar');?>
     </header>

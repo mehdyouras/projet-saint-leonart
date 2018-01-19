@@ -1,4 +1,6 @@
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/what-input/dist/what-input.js"></script>
-<script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-<script src="js/app.js"></script>
+    <script src="<?php sla_asset('js/jquery.slim.min.js'); ?>"></script>
+    <script src="<?php sla_asset('js/what-input.min.js'); ?>"></script>
+    <script src="<?php sla_asset('js/foundation.min.js'); ?>"></script>
+    <script src="<?php sla_asset('js/app.js'); ?>"></script>
+</body>
+</html>
