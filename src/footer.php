@@ -1,7 +1,7 @@
     <footer>
-        <h2 class="show-for-sr">Pied de page</h2>
+        <h2 class="sr-only">Pied de page</h2>
         <nav>
-            <h3 class="show-for-sr">Navigation de pied de page</h3>
+            <h3 class="sr-only">Navigation de pied de page</h3>
             <ul>
                 <?php foreach(sla_get_nav_items('header') as $item):
                     $is_active = sla_is_active($item->link, $current_url);
@@ -13,7 +13,7 @@
             </ul>
         </nav>
         <section>
-            <h3 class="show-for-sr">Nos partenaires</h3>
+            <h3 class="sr-only">Nos partenaires</h3>
             <ul>
                 <li>
                     <a href="#"><img src="#" alt="Partenaire 1"></a>
@@ -30,16 +30,16 @@
             <h3>S'inscrire à la Newsletter</h3>
         </section>
         <section>
-            <h3 class="show-for-sr">Nos réseaux sociaux</h3>
+            <h3 class="sr-only">Nos réseaux sociaux</h3>
             <ul>
                 <li>
-                    <a href="#"><span class="show-for-sr">Vers la page Facebook</span></a>
+                    <a href="#"><span class="sr-only">Vers la page Facebook</span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="show-for-sr">Vers la page Twitter</span></a>
+                    <a href="#"><span class="sr-only">Vers la page Twitter</span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="show-for-sr">Vers la page Instagram</span></a>
+                    <a href="#"><span class="sr-only">Vers la page Instagram</span></a>
                 </li>
             </ul>
         </section>
