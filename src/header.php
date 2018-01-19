@@ -15,4 +15,13 @@
 <body>
     <header>
         <?php get_template_part('part', 'navbar');?>
+        <h1>Saint Léon'art</h1>
+        <p>
+            <strong><time>28 - 30 septembre 2018</time></strong>
+            <strong>Quartier Saint-Léonard à liège</strong>
+        </p>
+        <div>
+            <a href="#" class="cta cta__primary">Programme</a>
+            <a href="#" class="cta cta__secondary">Artistes</a>
+        </div>
     </header>
