@@ -1,6 +1,6 @@
 <?php 
 /*
-        Template Name: Page des actus
+        Template Name: Page en pratique
 */
     get_header();
 ?>
