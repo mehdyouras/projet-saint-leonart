@@ -1,5 +1,96 @@
 <?php
 
+add_action('init', 'sla_init_types');
+
+function sla_init_types()
+{
+    register_post_type('event', [
+        'label' => 'Événements',
+        'labels' => [
+            'all_items' => 'Tous les événments',
+            'singular_name' => 'événement',
+            'add_new' => 'Ajouter un événement',
+        ],
+        'description' => 'Type d\'article permettant d\'ajouter de nouveaux événements au site',
+        'menu_position' => 20,
+        'menu_icon' => 'dashicons-screenoptions',
+        'public' => true,
+    ]);
+    register_post_type('artist', [
+        'label' => 'Artistes',
+        'labels' => [
+            'all_items' => 'Tous les artistes',
+            'singular_name' => 'artiste',
+            'add_new' => 'Ajouter un artiste',
+        ],
+        'description' => 'Type d\'article permettant d\'ajouter de nouveaux artistes au site',
+        'menu_position' => 20,
+        'menu_icon' => 'dashicons-art',
+        'public' => true,
+    ]);
+    register_post_type('news', [
+        'label' => 'Actualités',
+        'labels' => [
+            'all_items' => 'Toutes les actualités',
+            'singular_name' => 'actualité',
+            'add_new' => 'Ajouter une actualité',
+        ],
+        'description' => 'Type d\'article permettant d\'ajouter de nouvelles actualités au site',
+        'menu_position' => 20,
+        'menu_icon' => 'dashicons-feedback',
+        'public' => true,
+    ]);
+    register_taxonomy('subject', 'news', [
+        'label' => 'Sujet de l\'actualité',
+        'labels' => [
+            'singular_name' => 'subject',
+            'edit_item' => 'Éditer le sujet de l\'actualité',
+            'add_new_item' => 'Ajouter une nouveau Sujet d\'actualité',
+        ],
+        'description' => 'Sujet de l\'actualité proposé par saint-léon\'art',
+        'public' => true,
+        'hierarchical' => true,
+    ]);
+    // si plusieur type de post code de cette manière -> ['trip','event']
+    register_taxonomy('type', 'event', [
+        'label' => 'Type d\'événement',
+        'labels' => [
+        'singular_name' => 'type',
+        'edit_item' => 'Éditer le type d\'événement',
+        'add_new_item' => 'Ajouter une nouveau type d\'événement',
+        ],
+        'description' => 'Type d\'événement proposé par saint-léon\'art',
+        'public' => true,
+        'hierarchical' => true,
+    ]);
+    register_taxonomy('kind', 'artist', [
+        'label' => 'Genre d\'artiste',
+        'labels' => [
+        'singular_name' => 'genre',
+        'edit_item' => 'Éditer le genre d\'artiste',
+        'add_new_item' => 'Ajouter une nouveau genre d\'artiste',
+        ],
+        'description' => 'Genre d\'artiste proposé par saint-léon\'art',
+        'public' => true,
+        'hierarchical' => true,
+    ]);
+}
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page([
+        /* (string) The title displayed on the options page. Required. */
+	'page_title' => 'Partenaires',
+	
+	/* (string) The title displayed in the wp-admin sidebar. Defaults to page_title */
+    'menu_title' => 'Partenaires',
+    
+    'position' => 5
+	
+    ]);
+	
+}
+
 function sla_the_title() {
     $title = get_the_title();
     if(is_front_page()) {

@@ -2,7 +2,7 @@
 
 <section>
     <header>
-        <h2>Exposition</h2>
+        <h2>Événement</h2>
     </header>
     <article>
         <header>
