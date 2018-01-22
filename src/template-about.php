@@ -11,52 +11,48 @@ get_header();
     </header>
     <div>
         <p>
-        Saint Leon'art vise à favoriser la rencontre entre la population du quartier, largement multiculturelle, et l'art sous toutes ses formes, tout en créant des liens durables entre habitants et artistes qui s'y côtoient chaque jours. Cette initiative souhaite également rendre l'art, l'artiste et la culture accessibles à tous, toutes origines, toutes classes sociales confondues, en offrant un accès libre et gratuit à l'événement.
+            <?php the_field('about_intro'); ?>
         </p>
+        <?php if( have_rows('about_creators') ): ?>
         <section>
             <h3>Les organisateurs</h3>
             <ul>
+                <?php while ( have_rows('about_creators') ) : the_row(); ?>
                 <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
+                    <?= wp_get_attachment_image( get_sub_field('creator_portrait'),  'sla_portrait_small'); ?>
+                    <span><?php the_sub_field('creator_name'); ?></span>
                 </li>
-                <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                </li>
-                <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                </li>
-                <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                </li>
+                <?php endwhile; ?>
             </ul>
         </section>
+        <?php endif; ?>
+        <?php if( have_rows('about_stats') ): ?>
         <section>
             <h3 class="sr-only">Quelques chiffres</h3>
             <ul>
-                <li>4 éditions</li>
-                <li>+70 artistes</li>
-                <li>+1500 visiteurs</li>
-                <li>+30 expositions</li>
+                <?php while ( have_rows('about_stats') ) : the_row(); ?>
+                <li>
+                    <span class="d-block"><?php the_sub_field('stat_value'); ?></span>
+                    <span class="d-block"><?php the_sub_field('stat_name'); ?></span>
+                </li>
+                <?php endwhile; ?>
             </ul>
         </section>
-        <a href="#" class="cta cta__secondary">Programme 2018</a>
+        <?php endif; ?>
+        <a href="<?php sla_the_permalink_by_title("Programme") ?>" class="cta cta__secondary">Programme 2018</a>
         <section>
-            <h3>Les éditions précédentes</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quisquam, minus obcaecati et sapiente quas libero rem, ullam modi aliquam animi eius recusandae eligendi voluptates nobis? Dolorem architecto voluptatum cum.</p>            
+            <?php the_field('about_other'); ?>
         </section>
         <section>
             <h3>Espace presse</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, commodi. Consequuntur repudiandae est recusandae debitis aperiam ullam laudantium, incidunt aliquam hic optio, iure nesciunt quam harum ad quas magnam laborum.</p>
+            <p><?php the_field('press_intro'); ?></p>
             <ul>
-                <li><a href="#">Logos</a> 3 Mo</li>
-                <li><a href="#">Documents</a> 3 Mo</li>
+                <?php while ( have_rows('press_files') ) : the_row(); $file = get_sub_field('file_file');?>
+                <li><a href="<?= $file['url']; ?>"><?php the_sub_field('file_name') ?></a> <?= sla_filesize_formatted($file['id']) ?></li>
+                <?php endwhile; ?>
             </ul>
         </section>
-        <a href="#" class="cta cta__secondary">Nous contacter</a>
+        <a href="<?php sla_the_permalink_by_title("Contact") ?>" class="cta cta__secondary">Nous contacter</a>
     </div>
 </section>
 

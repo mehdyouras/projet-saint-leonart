@@ -19,12 +19,27 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
     ];
 }, 10, 4 );
 
+function sla_get_permalink_by_title( $title ) {
+    // Initialize the permalink value
+    $permalink = null;
+    // Try to get the page by the incoming title
+    $page = get_page_by_title( strtolower( $title ) );
+    // If the page exists, then let's get its permalink
+    if( null != $page ) {
+        $permalink = get_permalink( $page->ID );
+    } // end if
+    return $permalink;
+} // end theme_get_permalink_by_title
+function sla_the_permalink_by_title($title) {
+    echo sla_get_permalink_by_title($title);
+};
+
 function sla_init_types()
 {
     register_post_type('event', [
         'label' => 'Événements',
         'labels' => [
-            'all_items' => 'Tous les événments',
+            'all_items' => 'Tous les événements',
             'singular_name' => 'événement',
             'add_new' => 'Ajouter un événement',
         ],
@@ -189,4 +204,12 @@ function sla_is_active($link, $current_url) {
         $is_active = true;
     }
     return $is_active;
+}
+
+function sla_filesize_formatted($id)
+{
+    $size = filesize(get_attached_file($id));
+    $units = array( 'o', 'Ko', 'Mo', 'Go', 'To', 'Po', 'Eo', 'Zo', 'Yo');
+    $power = $size > 0 ? floor(log($size, 1024)) : 0;
+    return number_format($size / pow(1024, $power), 2, '.', ',') . ' ' . $units[$power];
 }
