@@ -3,55 +3,49 @@
     <h2 class="sr-only">Contenu principal</h2>
     <section>
         <h3>Quelques artistes présents</h3>
+        <?php 
+            $args = array( 
+                'post_type'         => 'artist',
+                'posts_per_page'    => 4,
+                'orderby'			=> 'rand');
+            $artists = new WP_Query( $args );
+        ?>
         <div>
             <ul>
+                <?php while ( $artists->have_posts() ) : $artists->the_post(); ?>
                 <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                    <span>Peintre</span>
+                    <a href="<?php the_permalink(); ?>">
+                        <?= wp_get_attachment_image( get_field('artist_portrait'), 'sla_portrait_small'); ?>
+                        <?php the_field('artist_name'); ?>
+                    </a>
+                    <?php $terms = get_field('artist_kind'); ?>
+                    <?php foreach($terms as $key => $term) : ?>
+                    <?= $term->name; if(count($terms) > 1 && ($key + 1) !== count($terms)):echo ','; endif;  ?>
+                    <?php endforeach; ?>
                 </li>
-                <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                    <span>Peintre</span>
-                </li>
-                <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                    <span>Peintre</span>
-                </li>
-                <li>
-                    <img src="#" alt="#">
-                    <a href="#">Jean Dujardin</a>
-                    <span>Peintre</span>
-                </li>
+                <?php endwhile; ?>
             </ul>
-            <a href="#" class="cta cta__secondary">Voir tous les artistes</a>
-        </div>
-    </section>
-    <section>
-        <h3>Prochain événement</h3>
-        <div>
-            <article>
-                <time>22/09</time>
-                <h4>Une expo dans le quartier</h4>
-                <a href="#" class="readmore">En savoir plus</a>
-            </article>
-            <a href="#" class="cta cta__secondary">Consulter l'agenda</a>
+            <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="cta cta__secondary">Voir tous les artistes</a>
         </div>
     </section>
     <section>
         <h3>Dernières actualités</h3>
+        <?php 
+            $args = array( 
+                'post_type'         => 'news',
+                'posts_per_page'    => 1);
+            $news = new WP_Query( $args );
+        ?>
         <div>
+        <?php while ( $news->have_posts() ) : $news->the_post(); ?>
             <article>
-                <time>22/09</time>
-                <h4>Nouvelles inscriptions</h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, similique assumenda incidunt alias recusandae eos beatae, nulla dolor dolores vitae nam neque doloremque provident consectetur pariatur sint porro quas. In?
-                </p>
-                <a href="#" class="readmore">Lire plus</a>
+                <time><?php the_date(); ?></time>
+                <h4><?php the_field('news_title'); ?></h4>
+                <p><?php the_field('news_excerpt'); ?></p>
+                <a href="<?php the_permalink(); ?>" class="readmore">En savoir plus</a>
             </article>
-            <a href="#" class="cta cta__secondary">Voir toutes les news</a>
+            <?php endwhile; ?>
+            <a href="<?php sla_the_permalink_by_title('Actualités'); ?>" class="cta cta__secondary">Voir toutes les news</a>
         </div>
     </section>
     <section>

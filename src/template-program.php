@@ -3,14 +3,33 @@
         Template Name: Page du programme
 */
 get_header();
+if (!isset($_SESSION['filter'])) {
+    $_SESSION['filter'] = 'null';
+}
 $args = array( 
     'post_type'         => 'event',
     'posts_per_page'    => -1,
     'meta_key'			=> 'event_start',
     'orderby'			=> 'meta_value',
-    'order'				=> 'DESC');
+    'order'				=> 'DESC',
+    'tax_query'         => array(
+        array(
+            'taxonomy'  => 'type',
+            'field'     => 'term_id',
+            'terms'     => $_SESSION['filter'],
+        ),
+    ),
+);
+
+if (isset($_GET['filter'])) {
+    $args[] = []; 
+};
+
+
 $loop = new WP_Query( $args );
 ?>
+
+<pre><?php var_dump($args) ?></pre>
 
 <section>
     <header>
@@ -31,9 +50,17 @@ $loop = new WP_Query( $args );
                 Filtre
             </a>
             <div class="collapse" id="filter">
+                <?php 
+                    $types = get_terms( array(
+                        'taxonomy' => 'type',
+                        'hide_empty' => true,
+                    ) );
+                ?>
                 <ul>
-                   <li>Artiste</li> 
-                   <li>Yo</li> 
+                    <?php foreach($types as $type): ?>
+                    <pre><?php var_dump($type) ?></pre>
+                    <li><a href="<?php the_permalink(); echo '?filter=' . $type->term_id ?>"><?= $type->name ?></a></li> 
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
