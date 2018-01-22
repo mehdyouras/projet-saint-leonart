@@ -4,29 +4,36 @@
 
 <article>
     <header>
-        <h2>Jean Dujardin</h2>
+        <h2><?php the_field('artist_name'); ?></h2>
     </header>
     <div>
         <div>
-            <img src="#" alt="fz">
-            <strong>Jean Dujardin</strong>
+            <?= wp_get_attachment_image( get_field('artist_portrait'), 'sla_portrait_large'); ?>
+            <strong><?php the_field('artist_name'); ?></strong>
             <p>
-                Artiste peintre
+                <?php $terms = get_field('artist_kind'); ?>
+                <?php foreach($terms as $key => $term) : ?>
+                <?= $term->name; if(count($terms) > 1 && ($key + 1) !== count($terms)):echo ','; endif;  ?>
+                <?php endforeach; ?>
             </p>
+            <?php if( have_rows('artist_socials') ): ?>
             <ul>
-                <a href="#"><span class="sr-only">Facebook</span></a>
-                <a href="#"><span class="sr-only">Twitter</span></a>
-                <a href="#"><span class="sr-only">Instagram</span></a>
+                <?php while ( have_rows('artist_socials') ) : the_row(); ?>
+                <a class="fa fa-<?php $social = get_sub_field('artist_social_network'); echo $social['value']; ?>" href="<?php the_sub_field('artist_social_network_link') ?>"><span class="sr-only"><?= $social['label']; ?></span></a>
+                <?php endwhile; ?>
             </ul>
+            <?php endif; ?>
+            <?php if( have_rows('artist_contacts') ): ?>
             <address>
-                <span>Rue neuve 5, Huy</span>
-                <span>jean@dujardin.be</span>
-                <span>0476 78 91 56</span>
-                <span>jean.dujardin.be</span>
+                <?php while ( have_rows('artist_contacts') ) : the_row(); ?>
+                <?php $type = get_sub_field('artist_contact_type'); ?>
+                <span class="fa fa-<?= $type['value']; ?>"><span class="sr-only"><?= $type['label']; ?> : </span><?php the_sub_field('artist_contact_value') ?></span>
+                <?php endwhile; ?>
             </address>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae numquam sed, optio at perferendis, ullam dignissimos libero quae fugit saepe doloremque consequuntur sapiente repellendus consectetur. Repudiandae ipsa exercitationem harum!</p>
+            <?php endif; ?>
+            <p><?php the_field('artist_description'); ?></p>
             <section>
-                <h3>Jean Dujardin sur le festival</h3>
+                <h3><?php the_field('artist_name'); ?> sur le festival</h3>
                 <ol>
                     <li>
                         <article>
@@ -44,15 +51,16 @@
                     </li>
                 </ol>
             </section>
+            <?php if( have_rows('artist_gallery') ): ?>
             <section>
                 <h3>Quelques photos de ses réalisations</h3>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <?php while ( have_rows('artist_gallery') ) : the_row(); ?>
+                <?= wp_get_attachment_image( get_sub_field('artist_gallery_photo')); ?>
+                <?php endwhile; ?>
             </section>
-            <a href="#" class="cta cta__secondary">Voir les autres artistes</a>
-            <a href="#" class="cta cta__secondary">Consulter le programme</a>
+            <?php endif; ?>
+            <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="cta cta__secondary">Voir les autres artistes</a>
+            <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="cta cta__secondary">Consulter le programme</a>
         </div>
     </div>
 </article>
