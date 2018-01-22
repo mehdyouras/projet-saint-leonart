@@ -12,7 +12,7 @@
                 <?php endforeach; ?>
             </ul>
         </nav>
-        <?php if( have_rows('about_creators') ): ?>
+        <?php if( have_rows('partners', 'option') ): ?>
         <section>
             <h3 class="sr-only">Nos partenaires</h3>
             <ul>
