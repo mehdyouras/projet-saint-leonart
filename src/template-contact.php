@@ -28,7 +28,7 @@
             <h3>Nous contacter</h3>
             <?php the_field('contact_form'); ?>
         </section> 
-        <a href="#" class="cta cta__secondary">Programme 2018</a>
+        <a href="<?php sla_the_permalink_by_title('Programme') ?>" class="cta cta__secondary">Programme 2018</a>
     </div>
 </section>
 
