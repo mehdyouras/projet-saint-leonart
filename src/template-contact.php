@@ -12,23 +12,21 @@
     <div>
         <section>
             <h3>Pourquoi nous contacter ?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptas sunt laudantium laboriosam tempora accusamus a consectetur nesciunt blanditiis quis eos dolore maiores, tenetur harum quisquam fugiat. Dolorum, expedita accusantium.</p>
+            <p><?php the_field('contact_why'); ?></p>
         </section>
         <article>
             <h3>Coordonnées de l'ASBL Lencreuse</h3>
             <address>
-                <span>Caroline Caucheteur</span>
-                <span>Rue Adelin et Jules Husson, 33</span>
-                <span>4020 Liège</span>
-                <span>0494 21 98 31</span>
-                <span>caroline@lencreuse.be </span>
+                <span class="d-block"><?php the_field('infos_contact_manager','option'); ?></span>
+                <span class="d-block"><?php the_field('infos_contact_address','option'); ?></span>
+                <span class="d-block"><?php the_field('infos_contact_postal','option'); ?></span>
+                <span class="d-block"><?php the_field('infos_contact_phone','option'); ?></span>
+                <span class="d-block"><?php the_field('infos_contact_email','option'); ?></span>
             </address>
         </article>
         <section>
             <h3>Nous contacter</h3>
-            <form action="#">
-                //
-            </form>
+            <?php the_field('contact_form'); ?>
         </section> 
         <a href="#" class="cta cta__secondary">Programme 2018</a>
     </div>
