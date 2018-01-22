@@ -7,31 +7,23 @@
 
 <section>
     <h2>Partenaires</h2>
+    <?php if( have_rows('partners', 'option') ): ?>
     <div>
         <ul>
+            <?php while ( have_rows('partners', 'option') ) : the_row(); ?>
             <li>
                 <article>
-                    <h3>Partenaire 1</h3>
-                    <img src="#" alt="#">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium pariatur recusandae minima maiores fugit blanditiis error consequuntur! Error neque repellendus harum quam laboriosam obcaecati praesentium! Eveniet deleniti voluptates natus impedit?</p>
+                    <h3><?php the_sub_field('partner_name'); ?></h3>
+                    <a href="<?php the_sub_field('partner_link'); ?>">
+                        <?= wp_get_attachment_image( get_sub_field('partner_logo'),  'sla_portrait_large'); ?>
+                    </a>
+                    <p><?php the_sub_field('partner_description'); ?></p>
                 </article>
             </li>
-            <li>
-                <article>
-                    <h3>Partenaire 2</h3>
-                    <img src="#" alt="#">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus sint nulla voluptate ipsa. Culpa ipsam perferendis quos dolore quisquam iure eius excepturi eum esse dolor deleniti, odit totam voluptatibus.</p>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <h3>Partenaire 3</h3>
-                    <img src="#" alt="#">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga laudantium at optio iusto aut necessitatibus eum nobis, officiis consequatur quia architecto, nesciunt dicta. Totam corrupti voluptatum neque eligendi maiores beatae.</p>
-                </article>
-            </li>
+            <?php endwhile; ?>
         </ul>
     </div>
+    <?php endif; ?>
 </section>
 
 <?php get_footer(); ?>

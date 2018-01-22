@@ -19,6 +19,33 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
     ];
 }, 10, 4 );
 
+function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+function fix_svg() {
+    echo '<style type="text/css">
+        .attachment-266x266, .thumbnail img {
+             width: 100% !important;
+             height: auto !important;
+        }
+        </style>';
+}
+add_action( 'admin_head', 'fix_svg' );
+
+function wpse240579_fix_svg_size_attributes( $out, $id ) {
+    $image_url  = wp_get_attachment_url( $id );
+    $file_ext   = pathinfo( $image_url, PATHINFO_EXTENSION );
+
+    if ( is_admin() || 'svg' !== $file_ext ) {
+        return false;
+    }
+
+    return array( $image_url, null, null, false );
+}
+add_filter( 'image_downsize', 'wpse240579_fix_svg_size_attributes', 10, 2 ); 
+
 function sla_get_permalink_by_title( $title ) {
     // Initialize the permalink value
     $permalink = null;

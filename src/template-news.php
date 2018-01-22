@@ -3,11 +3,15 @@
         Template Name: Page des actus
 */
     get_header();
+    $args = array( 
+        'post_type'         => 'news',
+        'posts_per_page'    => -1);
+    $loop = new WP_Query( $args );
 ?>
 
 <section>
     <h2>Actualité</h2>
-    <div>
+    <!-- <div>
         <div>
             <div id="headingOne">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -40,14 +44,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div>
         <div>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <article>
-                <time>22/09</time>
-                <h3>Une expo dans le quartier</h3>
-                <a href="#" class="readmore">En savoir plus</a>
+                <time><?php the_date(); ?></time>
+                <h3><?php the_field('news_title'); ?></h3>
+                <p><?php the_field('news_excerpt'); ?></p>
+                <a href="<?php the_permalink(); ?>" class="readmore">En savoir plus</a>
             </article>
+            <?php endwhile; ?>
         </div>
     </div>
 </section>

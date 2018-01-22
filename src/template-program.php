@@ -32,8 +32,8 @@ get_header();
         </div>
     </header>
     <div>
-        <a href="#" class="cta cta__primary">Voir tous les artistes</a>
-        <a href="#" class="cta cta__secondary">En pratique</a>
+        <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="cta cta__primary">Voir tous les artistes</a>
+        <a href="<?php sla_the_permalink_by_title('En pratique'); ?>" class="cta cta__secondary">En pratique</a>
         <ol>
             <li>
                 <article>

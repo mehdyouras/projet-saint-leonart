@@ -12,20 +12,21 @@
                 <?php endforeach; ?>
             </ul>
         </nav>
+        <?php if( have_rows('about_creators') ): ?>
         <section>
             <h3 class="sr-only">Nos partenaires</h3>
             <ul>
+                <?php while ( have_rows('partners', 'option') ) : the_row(); ?>
                 <li>
-                    <a href="#"><img src="#" alt="Partenaire 1"></a>
+                    <a href="<?php the_sub_field('partner_link'); ?>">
+                        <?= wp_get_attachment_image( get_sub_field('partner_logo'),  'sla_portrait_large'); ?>
+                        <span class="sr-only"><?php the_sub_field('partner_name'); ?></span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#"><img src="#" alt="Partenaire 1"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="#" alt="Partenaire 1"></a>
-                </li>
+                <?php endwhile; ?>
             </ul>
         </section>
+        <?php endif; ?>
         <section>
             <h3>S'inscrire à la Newsletter</h3>
         </section>
