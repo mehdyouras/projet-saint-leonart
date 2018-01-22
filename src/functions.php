@@ -2,6 +2,23 @@
 
 add_action('init', 'sla_init_types');
 
+add_image_size( 'sla_portrait_small', 80, 80);
+add_image_size( 'sla_portrait_large', 150, 150);
+
+// Allow SVG
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+    global $wp_version;
+    if ( $wp_version !== '4.7.1' ) {
+        return $data;
+    }
+    $filetype = wp_check_filetype( $filename, $mimes );
+    return [
+        'ext'             => $filetype['ext'],
+        'type'            => $filetype['type'],
+        'proper_filename' => $data['proper_filename']
+    ];
+}, 10, 4 );
+
 function sla_init_types()
 {
     register_post_type('event', [
