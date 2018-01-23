@@ -3,8 +3,8 @@
         Template Name: Page du programme
 */
 get_header();
-if (!isset($_SESSION['filter'])) {
-    $_SESSION['filter'] = 'null';
+if (!isset($_GET['filter'])) {
+    $_GET['filter'] = 'null';
 }
 $args = array( 
     'post_type'         => 'event',
@@ -16,20 +16,14 @@ $args = array(
         array(
             'taxonomy'  => 'type',
             'field'     => 'term_id',
-            'terms'     => $_SESSION['filter'],
+            'terms'     => $_GET['filter'],
         ),
     ),
 );
 
-if (isset($_GET['filter'])) {
-    $args[] = []; 
-};
-
-
 $loop = new WP_Query( $args );
-?>
 
-<pre><?php var_dump($args) ?></pre>
+?>
 
 <section>
     <header>
@@ -59,7 +53,7 @@ $loop = new WP_Query( $args );
                 <ul>
                     <?php foreach($types as $type): ?>
                     <pre><?php var_dump($type) ?></pre>
-                    <li><a href="<?php the_permalink(); echo '?filter=' . $type->term_id ?>"><?= $type->name ?></a></li> 
+                    <li><a href="<?php the_permalink(); echo '&filter=' . $type->term_id ?>"><?= $type->name ?></a></li> 
                     <?php endforeach; ?>
                 </ul>
             </div>
