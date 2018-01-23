@@ -69,14 +69,14 @@
                 <?php endwhile; ?>
             </ol>
         </section>
-        <?php if( have_rows('artist_gallery') ): ?>
-        <section>
+        
+        <!-- <section>
             <h3>Quelques photos de ses réalisations</h3>
             <?php while ( have_rows('artist_gallery') ) : the_row(); ?>
             <?= wp_get_attachment_image( get_sub_field('artist_gallery_photo')); ?>
             <?php endwhile; ?>
-        </section>
-        <?php endif; ?>
+        </section> -->
+        
         <div class="text-center">
             <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-secondary mb-4">Voir les autres artistes</a>
             <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="btn btn-secondary mb-4">Consulter le programme</a>

@@ -50,27 +50,23 @@
             <?php the_field('newsletter', 'option'); ?>
         </div>
     </section>
-    <section class="bg-secondary mt-4">
+    <section class="bg-secondary mt-4 mb-4">
         <div class="container p-4">
-            <h3 class="text-primary">Nos réseaux sociaux</h3>
+            <h3 class="text-primary mb-3">Nos réseaux sociaux</h3>
             <div>
-                <ul class="list-unstyled d-flex display-4 justify-content-around mb-0">
+                <ul class="list-unstyled d-flex justify-content-around mb-0">
                     <li>
-                        <a class="fab fa-facebook" href="http://facebook.com"><span class="sr-only">Vers la page Facebook</span></a>
+                        <a class="fab fa-facebook socials--large" href="http://facebook.com"><span class="sr-only">Vers la page Facebook</span></a>
                     </li>
                     <li>
-                        <a class="fab fa-twitter" href="http://twitter.com"><span class="sr-only">Vers la page Twitter</span></a>
+                        <a class="fab fa-twitter socials--large" href="http://twitter.com"><span class="sr-only">Vers la page Twitter</span></a>
                     </li>
                     <li>
-                        <a class="fab fa-instagram" href="http://instagram.com"><span class="sr-only">Vers la page Instagram</span></a>
+                        <a class="fab fa-instagram socials--large" href="http://instagram.com"><span class="sr-only">Vers la page Instagram</span></a>
                     </li>
                 </ul>
             </div>
         </div>
-    </section>
-    <section>
-        <h3>Nos photos Instagram</h3>
-        <p>Widget instagram</p>
     </section>
 </section>
 <?php get_footer(); ?>
