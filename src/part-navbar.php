@@ -9,7 +9,7 @@
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto mr-lg-0 ml-lg-auto">
                 <?php foreach(sla_get_nav_items('header') as $item):
                     $is_active = sla_is_active($item->link, $current_url);
                 ?>

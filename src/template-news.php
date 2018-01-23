@@ -39,9 +39,13 @@
         <ol class="list-unstyled">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php if($_GET['filter'] === get_the_date('Y') || $_GET['filter'] === null): ?>
-            <li class="card mt-4">
-                <div class="card-body">
-                    <?php get_template_part( 'part', 'news' ); ?>
+            <li class="row mt-4 justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <?php get_template_part( 'part', 'news' ); ?>
+                        </div>
+                    </div>
                 </div>
             </li>
             <?php endif; ?>

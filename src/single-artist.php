@@ -6,8 +6,8 @@
     <header class="page-header">
         <h2 class="bg-secondary text-center p-3 text-primary"><?php the_field('artist_name'); ?></h2>
     </header>
-    <div class="d-flex">
-        <div class="col-md-6">
+    <div class="row flex-wrap">
+        <div class="col-12 col-md-6">
             <div class="card artist__card">
                 <span class="portrait--large text-center">
                     <?= wp_get_attachment_image( get_field('artist_portrait'), 'sla_portrait_large'); ?>

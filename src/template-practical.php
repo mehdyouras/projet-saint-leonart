@@ -9,8 +9,10 @@
     <header class="page-header">
         <h2 class="bg-secondary text-center p-3 text-primary">En pratique</h2>
     </header>
-    <div>
-        <?php the_field('practical_content'); ?>
+    <div class="mt-4">
+        <div class="practical__content">
+            <?php the_field('practical_content'); ?>
+        </div>
         <div class="text-center m-4">
             <a href="<?php sla_the_permalink_by_title('Programme') ?>" class="btn btn-secondary">Consulter le programme</a>
         </div>

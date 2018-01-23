@@ -3,6 +3,8 @@
         margin-top: 8rem;
     }
     &__events {
-        margin-top: 5.4rem;
+        @include media-breakpoint-up(md) {
+            margin-top: 5.4rem;
+        }
     }
 }
