@@ -4,6 +4,8 @@ add_action('init', 'sla_init_types');
 
 add_image_size( 'sla_portrait_small', 80, 80);
 add_image_size( 'sla_portrait_large', 150, 150);
+add_image_size( 'sla_partner_small', 85);
+add_image_size( 'sla_partner_large', 150);
 
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {

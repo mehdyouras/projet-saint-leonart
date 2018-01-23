@@ -1,0 +1,7 @@
+.btn {
+    text-transform: uppercase;
+    font-family: $headings-font-family;
+    &-secondary {
+        color: theme-color('primary');
+    }
+}
