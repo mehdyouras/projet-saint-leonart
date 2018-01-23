@@ -38,15 +38,15 @@
         <section class="bg-primary">
             <div class="container pt-2 pb-2">
                 <h3 class="sr-only">Nos réseaux sociaux</h3>
-                <ul class="list-unstyled d-flex display-4 justify-content-around mb-0">
+                <ul class="list-unstyled d-flex justify-content-around mb-0">
                     <li>
-                        <a class="text-light fab fa-facebook" href="http://facebook.com"><span class="sr-only">Vers la page Facebook</span></a>
+                        <a class="text-light fab fa-facebook socials--large p-2" href="http://facebook.com"><span class="sr-only">Vers la page Facebook</span></a>
                     </li>
                     <li>
-                        <a class="text-light fab fa-twitter" href="http://twitter.com"><span class="sr-only">Vers la page Twitter</span></a>
+                        <a class="text-light fab fa-twitter socials--large p-2" href="http://twitter.com"><span class="sr-only">Vers la page Twitter</span></a>
                     </li>
                     <li>
-                        <a class="text-light fab fa-instagram" href="http://instagram.com"><span class="sr-only">Vers la page Instagram</span></a>
+                        <a class="text-light fab fa-instagram socials--large p-2" href="http://instagram.com"><span class="sr-only">Vers la page Instagram</span></a>
                     </li>
                 </ul>
             </div>

@@ -2,4 +2,8 @@
     &--small {
         clip-path: circle(35px at center);
     }
+    &--large {
+        margin-top: -7rem;
+        clip-path: circle(60px at center);
+    }
 }
