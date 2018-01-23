@@ -35,15 +35,8 @@
                 $news = new WP_Query( $args );
             ?>
             <div class="card-body">
-            <?php while ( $news->have_posts() ) : $news->the_post(); ?>
-                <article class="mb-4">
-                    <time class="badge badge-primary"><?php the_date(); ?></time>
-                    <h4><a href="<?php the_permalink(); ?>"><?php the_field('news_title'); ?></a></h4>
-                    <p class="mb-2">
-                        <?php the_field('news_excerpt'); ?>
-                    </p>
-                    <a class="btn p-0" href="<?php the_permalink(); ?>" class="readmore"><i class="fas fa-angle-right mr-1" aria-hidden="true"></i>Lire plus</a>
-                </article>
+                <?php while ( $news->have_posts() ) : $news->the_post(); ?>
+                <?php get_template_part( 'part', 'news' ); ?>
                 <?php endwhile; ?>
                 <div class="text-center">
                     <a href="<?php sla_the_permalink_by_title('Actualités'); ?>" class="btn btn-secondary">Voir toutes les news</a>
