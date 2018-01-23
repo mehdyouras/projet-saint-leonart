@@ -1,0 +1,10 @@
+.header {
+    background-image: url('../img/header-bcg.jpg');
+    background-size: cover;
+    background-position: 50%; 
+    &--front-page {
+    }
+    &__content {
+        color: white;
+    }
+}

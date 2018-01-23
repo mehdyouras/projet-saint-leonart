@@ -1,0 +1,16 @@
+.navbar {
+    color: white;
+    &-toggler {
+        &-icon {
+            background-image: url('../img/bars.svg')
+        }
+    }
+}
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-family: $headings-font-family;
+    &--dark {
+        color: theme-color("primary");
+    }
+}

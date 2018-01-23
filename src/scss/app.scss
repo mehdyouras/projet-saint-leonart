@@ -14,6 +14,10 @@
 $font-family-sans-serif: Roboto, sans-serif;
 $headings-font-family: Oswald, $font-family-sans-serif;
 
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
  @import "settings/settings.fonts";
  @import "../../node_modules/bootstrap/scss/functions";
  @import "../../node_modules/bootstrap/scss/variables";
@@ -48,6 +52,10 @@ $headings-font-family: Oswald, $font-family-sans-serif;
  @import "../../node_modules/bootstrap/scss/tooltip";
  @import "../../node_modules/bootstrap/scss/popover";
  @import "../../node_modules/bootstrap/scss/carousel";
+
+@import "components/components.header";
+@import "components/components.navbar";
+
  @import "../../node_modules/bootstrap/scss/utilities";
  @import "../../node_modules/bootstrap/scss/print";
  

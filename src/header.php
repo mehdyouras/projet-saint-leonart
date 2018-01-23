@@ -13,15 +13,18 @@
     <![endif]-->
 </head>
 <body>
-    <header>
+    <header class="header header--front-page pb-4">
         <?php get_template_part('part', 'navbar');?>
-        <h1>Saint Léon'art</h1>
-        <p>
-            <strong><time>28 - 30 septembre 2018</time></strong>
-            <strong>Quartier Saint-Léonard à liège</strong>
-        </p>
-        <div>
-            <a href="#" class="cta cta__primary">Programme</a>
-            <a href="#" class="cta cta__secondary">Artistes</a>
+        <div class="container header__content text-center">
+            <img src="<?php sla_asset('img/logo.svg'); ?>" alt="Logo Saint Léon'art">
+            <h1>Saint Léon'art</h1>
+            <p>
+                <strong class="d-block"><time>28 - 30 septembre 2018</time></strong>
+                <strong>Quartier Saint-Léonard à liège</strong>
+            </p>
+            <div>
+                <a href="#" class="btn btn-secondary">Programme</a>
+                <a href="#" class="btn btn-primary">Artistes</a>
+            </div>
         </div>
     </header>
