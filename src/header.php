@@ -23,8 +23,8 @@
                 <strong>Quartier Saint-Léonard à liège</strong>
             </p>
             <div>
-                <a href="#" class="btn btn-secondary">Programme</a>
-                <a href="#" class="btn btn-primary">Artistes</a>
+                <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="btn btn-secondary">Programme</a>
+                <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-primary">Artistes</a>
             </div>
         </div>
     </header>
