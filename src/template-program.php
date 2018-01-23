@@ -4,7 +4,7 @@
 */
 get_header();
 if (!isset($_GET['filter'])) {
-    $_GET['filter'] = 'null';
+    $_GET['filter'] = null;
 }
 $args = array( 
     'post_type'         => 'event',

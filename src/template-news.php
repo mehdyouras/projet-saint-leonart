@@ -4,13 +4,12 @@
 */
     get_header();
     if (!isset($_GET['filter'])) {
-        $_GET['filter'] = 'null';
+        $_GET['filter'] = null;
     }
     $args = array( 
         'post_type'         => 'news',
         'posts_per_page'    => -1);
     $loop = new WP_Query( $args );
-    var_dump(get_posts_years_array());
 ?>
 
 <section>
@@ -37,7 +36,7 @@
     <div>
         <ol>
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-            <?php if($_GET['filter'] === null || $_GET['filter'] === get_the_date('Y')): ?>
+            <?php if($_GET['filter'] === get_the_date('Y') || $_GET['filter'] === null): ?>
             <li>
                 <article>
                     <time><?php the_date(); ?></time>
