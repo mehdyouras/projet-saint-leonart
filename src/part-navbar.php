@@ -4,6 +4,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <a href="<?php sla_the_permalink_by_title('Page d\'accueil'); ?>">
+            <img width="30" class="<?php if(is_front_page()){echo 'd-none';}; ?>" src="<?php sla_asset('img/logo.svg'); ?>" alt="Logo Saint Léon'art">
+        </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">

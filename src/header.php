@@ -16,15 +16,15 @@
     <header class="header header--front-page pb-4">
         <?php get_template_part('part', 'navbar');?>
         <div class="container header__content text-center">
-            <img src="<?php sla_asset('img/logo.svg'); ?>" alt="Logo Saint Léon'art">
+            <img class="<?php if(!is_front_page()){echo 'd-none';}; ?>" src="<?php sla_asset('img/logo.svg'); ?>" alt="Logo Saint Léon'art">
             <h1>Saint Léon'art</h1>
             <p>
                 <strong class="d-block"><time>28 - 30 septembre 2018</time></strong>
-                <strong>Quartier Saint-Léonard à liège</strong>
+                <strong class="<?php if(!is_front_page()){echo 'd-none';}; ?>">Quartier Saint-Léonard à liège</strong>
             </p>
             <div>
-                <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="btn btn-secondary">Programme</a>
-                <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-primary">Artistes</a>
+                <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="btn btn-secondary <?php if(!is_front_page()){echo 'd-none';}; ?>">Programme</a>
+                <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-primary <?php if(!is_front_page()){echo 'd-none';}; ?>">Artistes</a>
             </div>
         </div>
     </header>
