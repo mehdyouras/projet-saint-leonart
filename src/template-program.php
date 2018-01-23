@@ -52,7 +52,7 @@ $loop = new WP_Query( $args );
                 ?>
                 <ul class="list-unstyled mb-0 list-group list-group-flush text-center">
                     <?php foreach($types as $type): ?>
-                    <li class="list-group-item bg-secondary text-uppercase"><a href="<?php the_permalink(); echo '&filter=' . $type->term_id ?>"><?= $type->name ?></a></li> 
+                    <li><a class="list-group-item bg-secondary text-uppercase" href="<?php the_permalink(); echo '&filter=' . $type->term_id ?>"><?= $type->name ?></a></li> 
                     <?php endforeach; ?>
                 </ul>
             </div>
