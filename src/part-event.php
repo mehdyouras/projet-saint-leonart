@@ -1,4 +1,4 @@
-<li class="card">
+<div class="card">
     <article>
         <div class="bg-secondary text-primary p-2 pl-4">
             <time><?php the_field('event_start'); ?></time>
@@ -24,4 +24,4 @@
             jusqu'au <time><?php the_field('event_end'); ?></time>
         </div>
     </article>
-</li>
+</div>

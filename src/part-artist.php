@@ -1,4 +1,4 @@
-<li class="d-flex flex-column col-6 text-center mb-3">
+<li class="d-flex flex-column col-6 col-sm-4 col-md-3 col-xl-2 text-center mb-3">
     <a class="portrait portrait--small" href="<?php the_permalink(); ?>">
         <?= wp_get_attachment_image( get_field('artist_portrait'), 'sla_portrait_small'); ?>
     </a>
