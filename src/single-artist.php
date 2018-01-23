@@ -48,24 +48,25 @@
             </address>
             <?php endif; ?>
         </div>
-        <p><?php the_field('artist_description'); ?></p>
+        <p class="mt-4"><?php the_field('artist_description'); ?></p>
+        <?php
+            $args = array( 
+                'post_type'         => 'event',
+                'posts_per_page'    => -1,
+                'meta_key'			=> 'event_start',
+                'orderby'			=> 'meta_value',
+                'order'				=> 'DESC',
+            );
+            $events = new WP_Query( $args );
+        ?>
         <section>
             <h3><?php the_field('artist_name'); ?> sur le festival</h3>
-            <ol>
-                <li>
-                    <article>
-                        <img src="http://fakeimg.pl/250x100/" alt="">
-                        <div>
-                            <time>Vendredi 28 à 12h</time>
-                            <time>Samedi 29 à 19h</time>
-                        </div>
-                        <div>
-                            <h3>
-                                Exposition de Jean Dujardin
-                            </h3>
-                        </div>
-                    </article>
-                </li>
+            <ol class="list-unstyled">
+                <?php $artistId = get_the_id(); while ( $events->have_posts() ) : $events->the_post();?>
+                <?php if(sla_is_event_artist($artistId, get_field('event_artists'))): ?>
+                <?php get_template_part( 'part', 'event' ); ?>
+                <?php endif; ?>
+                <?php endwhile; ?>
             </ol>
         </section>
         <?php if( have_rows('artist_gallery') ): ?>
@@ -76,8 +77,10 @@
             <?php endwhile; ?>
         </section>
         <?php endif; ?>
-        <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="cta cta__secondary">Voir les autres artistes</a>
-        <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="cta cta__secondary">Consulter le programme</a>
+        <div class="text-center">
+            <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-secondary mb-4">Voir les autres artistes</a>
+            <a href="<?php sla_the_permalink_by_title('Programme'); ?>" class="btn btn-secondary mb-4">Consulter le programme</a>
+        </div>
     </div>
 </article>
 

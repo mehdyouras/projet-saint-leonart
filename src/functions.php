@@ -259,3 +259,13 @@ function get_posts_years_array() {
     }
     return $result;
 }
+
+function sla_is_event_artist($idToFind, $artists) {
+    $is = false;
+    foreach($artists as $artist) {
+        if($idToFind === $artist->ID) {
+            $is = true;
+        }
+    }
+    return $is;
+}
