@@ -12,38 +12,37 @@
     $loop = new WP_Query( $args );
 ?>
 
-<section>
-    <h2>Actualité</h2>
+<section class="container">
+    <header class="page-header">
+        <h2 class="bg-secondary text-center p-3 text-primary">Actualité</h2>
+    </header>
     <div>
         <div>
             <div id="filter">
-                <button class="btn btn-primary" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
-                    Année de publication
+                <button class="btn btn-primary w-100" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
+                    Année de publication <i class="fas fa-angle-down ml-1" aria-hidden="true"></i>
                 </button>
             </div>
 
             <div id="collapse" class="collapse" aria-labelledby="filter" data-parent="#accordion">
                 <div>
-                    <ul>
+                    <ol class="list-unstyled mb-0 list-group list-group-flush text-center">
                         <?php $years = get_posts_years_array(); foreach($years as $year): ?>
-                        <li><a href="<?php the_permalink(); echo '&filter=' . $year ?>"><?= $year ?></a></li>
+                        <li><a class="list-group-item bg-secondary text-uppercase" href="<?php the_permalink(); echo '&filter=' . $year ?>"><?= $year ?></a></li>
                         <?php endforeach; ?>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
     </div>
     <div>
-        <ol>
+        <ol class="list-unstyled">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php if($_GET['filter'] === get_the_date('Y') || $_GET['filter'] === null): ?>
-            <li>
-                <article>
-                    <time><?php the_date(); ?></time>
-                    <h3><?php the_field('news_title'); ?></h3>
-                    <p><?php the_field('news_excerpt'); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="readmore">En savoir plus</a>
-                </article>
+            <li class="card mt-4">
+                <div class="card-body">
+                    <?php get_template_part( 'part', 'news' ); ?>
+                </div>
             </li>
             <?php endif; ?>
             <?php endwhile; ?>
