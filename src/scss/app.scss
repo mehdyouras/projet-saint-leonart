@@ -1,14 +1,14 @@
 /*!
- * Bootstrap v4.0.0 (https://getbootstrap.com)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+* Bootstrap v4.0.0 (https://getbootstrap.com)
+* Copyright 2011-2018 The Bootstrap Authors
+* Copyright 2011-2018 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+*/
 
 
- $theme-colors: (
-  "primary": #821C4A,
-  "secondary": #FEC947
+$theme-colors: (
+"primary": #821C4A,
+"secondary": #FEC947
 );
 
 $font-family-sans-serif: Roboto, sans-serif;
@@ -18,44 +18,63 @@ $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
 
- @import "settings/settings.fonts";
- @import "../../node_modules/bootstrap/scss/functions";
- @import "../../node_modules/bootstrap/scss/variables";
- @import "../../node_modules/bootstrap/scss/mixins";
- @import "../../node_modules/bootstrap/scss/root";
- @import "../../node_modules/bootstrap/scss/reboot";
- @import "../../node_modules/bootstrap/scss/type";
- @import "../../node_modules/bootstrap/scss/images";
- @import "../../node_modules/bootstrap/scss/code";
- @import "../../node_modules/bootstrap/scss/grid";
- @import "../../node_modules/bootstrap/scss/tables";
- @import "../../node_modules/bootstrap/scss/forms";
- @import "../../node_modules/bootstrap/scss/buttons";
- @import "../../node_modules/bootstrap/scss/transitions";
- @import "../../node_modules/bootstrap/scss/dropdown";
- @import "../../node_modules/bootstrap/scss/button-group";
- @import "../../node_modules/bootstrap/scss/input-group";
- @import "../../node_modules/bootstrap/scss/custom-forms";
- @import "../../node_modules/bootstrap/scss/nav";
- @import "../../node_modules/bootstrap/scss/navbar";
- @import "../../node_modules/bootstrap/scss/card";
- @import "../../node_modules/bootstrap/scss/breadcrumb";
- @import "../../node_modules/bootstrap/scss/pagination";
- @import "../../node_modules/bootstrap/scss/badge";
- @import "../../node_modules/bootstrap/scss/jumbotron";
- @import "../../node_modules/bootstrap/scss/alert";
- @import "../../node_modules/bootstrap/scss/progress";
- @import "../../node_modules/bootstrap/scss/media";
- @import "../../node_modules/bootstrap/scss/list-group";
- @import "../../node_modules/bootstrap/scss/close";
- @import "../../node_modules/bootstrap/scss/modal";
- @import "../../node_modules/bootstrap/scss/tooltip";
- @import "../../node_modules/bootstrap/scss/popover";
- @import "../../node_modules/bootstrap/scss/carousel";
+@import "settings/settings.fonts";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/input-group";
+@import "../../node_modules/bootstrap/scss/custom-forms";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/jumbotron";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/media";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
 
 @import "components/components.header";
 @import "components/components.navbar";
+@import "components/components.footer";
+@import "components/components.btn";
 
- @import "../../node_modules/bootstrap/scss/utilities";
- @import "../../node_modules/bootstrap/scss/print";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/print";
+
+$fa-font-path: '../fonts/font-awesome';
+
+@import 'font-awesome/fa-solid';
+@import 'font-awesome/fa-brands';
+@import 'font-awesome/variables';
+@import 'font-awesome/mixins';
+@import 'font-awesome/core';
+@import 'font-awesome/larger';
+@import 'font-awesome/fixed-width';
+@import 'font-awesome/list';
+@import 'font-awesome/bordered-pulled';
+@import 'font-awesome/animated';
+@import 'font-awesome/rotated-flipped';
+@import 'font-awesome/stacked';
+@import 'font-awesome/icons';
+@import 'font-awesome/screen-reader';
  
