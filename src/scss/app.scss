@@ -18,6 +18,8 @@ $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
 
+$link-hover-decoration: none;
+
 @import "settings/settings.fonts";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -64,6 +66,8 @@ $border-radius-sm: 0;
 @import "components/components.front";
 @import "components/components.about";
 @import "components/components.practical";
+@import "components/components.event";
+@import "components/components.news";
 
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/print";

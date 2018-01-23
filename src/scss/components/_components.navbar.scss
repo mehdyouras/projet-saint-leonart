@@ -10,7 +10,14 @@
     color: white;
     text-transform: uppercase;
     font-family: $headings-font-family;
+    transition: 0.2s;
     &--dark {
         color: theme-color("primary");
+    }
+    &:hover {
+        color: rgb(230, 230, 230);
+    }
+    &.active {
+        border-bottom: 2px solid white;
     }
 }

@@ -1,7 +1,7 @@
     <footer class="footer bg-secondary pt-4">
         <div class="container">
             <h2 class="sr-only">Pied de page</h2>
-            <div class="row">
+            <div class="row pb-4">
                 <nav class="col-12 col-md-3">
                     <h3 class="sr-only">Navigation de pied de page</h3>
                     <ul class="list-unstyled list-group list-group-flush text-center">
@@ -54,7 +54,7 @@
             </div>
         </section>
         <div class="p-2 text-center footer__rights text-light">
-            <p class="mb-0">© 2017 Mehdy Ouras</p>
+            <p class="mb-0 mx-auto">© 2017 Mehdy Ouras</p>
         </div>
     </footer>
     <script src="<?php sla_asset('js/jquery.slim.min.js'); ?>"></script>

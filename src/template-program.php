@@ -61,8 +61,8 @@ $loop = new WP_Query( $args );
     </header>
     <div>
         <div class="d-flex flex-column align-items-center mt-4">
-            <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-primary col-7 mb-2">Voir tous les artistes</a>
-            <a href="<?php sla_the_permalink_by_title('En pratique'); ?>" class="btn btn-secondary col-7">En pratique</a>
+            <a href="<?php sla_the_permalink_by_title('Artistes'); ?>" class="btn btn-primary mb-2">Voir tous les artistes</a>
+            <a href="<?php sla_the_permalink_by_title('En pratique'); ?>" class="btn btn-secondary ">En pratique</a>
         </div>
         <ol class="list-unstyled container mt-4 d-flex flex-wrap">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); $artists = get_field('event_artists'); ?>
