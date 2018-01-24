@@ -269,3 +269,37 @@ function sla_is_event_artist($idToFind, $artists) {
     }
     return $is;
 }
+
+function sla_get_datetime($time) {
+    $date = date_create_from_format('d/m/Y', $time);
+    return date_format($date, 'Y-m-d');
+}
+function sla_the_datetime($time) {
+    echo sla_get_datetime($time);
+}
+
+function sla_get_datetime_from_hour($time) {
+    $index = strpos($time, ' '); 
+    $time = substr($time, $index);
+    $time = trim($time);
+    $date = date_create_from_format('d/m/Y H:i', $time);
+    return date_format($date, 'Y-m-d H:i');
+}
+
+function sla_the_datetime_from_hour($time) {
+    echo sla_get_datetime_from_hour($time);
+}
+
+function sla_get_human_event_date($time) {
+    $indexL = strpos($time, '/');
+    $day = trim(substr($time, 0, $indexL));
+
+    $indexR = strrpos($time, ' ');
+    $hour = trim(substr($time, $indexR));
+    
+    return $day.' à '.$hour;
+}
+
+function sla_the_human_event_date($time) {
+    echo sla_get_human_event_date($time);
+}

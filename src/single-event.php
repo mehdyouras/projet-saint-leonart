@@ -24,10 +24,10 @@ $artists = get_field('event_artists')
     <div>
         <div class="event__times">
             <div class="bg-secondary text-primary p-2 pl-4">
-                <time><?php the_field('event_start'); ?></time>
+                <time datetime="<?php sla_the_datetime_from_hour(get_field('event_start')); ?>"><?php sla_the_human_event_date(get_field('event_start')); ?></time>
             </div>
             <div class="bg-primary p-2 pr-4 text-light text-right">
-                jusqu'au <time><?php the_field('event_end'); ?></time>
+                jusqu'au <time datetime="<?php sla_the_datetime_from_hour(get_field('event_end')); ?>"><?php sla_the_human_event_date(get_field('event_end')); ?></time>
             </div>
         </div>
         <div>

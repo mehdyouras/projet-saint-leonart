@@ -24,8 +24,9 @@
         <div id="collapse" class="collapse" aria-labelledby="filter" data-parent="#accordion">
             <div>
                 <ol class="list-unstyled mb-0 list-group list-group-flush text-center">
+                    <li><a class="list-group-item bg-secondary text-uppercase" href="<?php the_permalink(); ?>">Tout afficher</a></li>
                     <?php $years = get_posts_years_array(); foreach($years as $year): ?>
-                    <li><a class="list-group-item bg-secondary text-uppercase" href="<?php the_permalink(); echo '&filter=' . $year ?>"><?= $year ?></a></li>
+                    <li><a class="list-group-item bg-secondary text-uppercase <?php if($year == $_GET['filter']){echo 'active';};?>" href="<?= add_query_arg( 'filter', $year ); ?>"><?= $year ?></a></li>
                     <?php endforeach; ?>
                 </ol>
             </div>

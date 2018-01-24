@@ -4,7 +4,7 @@
     <header class="page-header">
         <h2 class="bg-secondary text-center p-3 text-primary"><?php the_field('news_title'); ?></h2>
         <div class="bg-secondary text-center p-2 text-primary mb-4">
-            <time><?= get_the_date(); ?></time>
+            <time datetime="<?php sla_the_datetime(get_the_date()); ?>"><?= get_the_date(); ?></time>
         </div>
     </header>
     <div>

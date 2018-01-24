@@ -1,5 +1,5 @@
 <article class="mb-4">
-    <time class="badge badge-primary"><?php the_date(); ?></time>
+    <time datetime="<?php sla_the_datetime(get_the_date()); ?>" class="badge badge-primary"><?php the_date(); ?></time>
     <h4><a href="<?php the_permalink(); ?>"><?php the_field('news_title'); ?></a></h4>
     <p class="mb-2">
         <?php the_field('news_excerpt'); ?>

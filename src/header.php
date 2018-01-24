@@ -17,7 +17,7 @@
             <img class="<?php if(!is_front_page()){echo 'd-none';}; ?>" src="<?php sla_asset('img/logo.svg'); ?>" alt="Logo Saint Léon'art">
             <h1>Saint Léon'art</h1>
             <p class="mx-auto">
-                <strong class="d-block"><time>28 - 30 septembre 2018</time></strong>
+                <strong class="d-block"><time datetime="2018-09-28"><?php the_field('infos_date', 'option') ?></time></strong>
                 <strong class="<?php if(!is_front_page()){echo 'd-none';}; ?>">Quartier Saint-Léonard à liège</strong>
             </p>
             <div>

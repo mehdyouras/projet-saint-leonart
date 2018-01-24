@@ -40,7 +40,7 @@ $loop = new WP_Query( $args );
                     <a class="text-light text-center d-block pt-2 pb-2" href="#">Dim. 30</a>
                 </li>
             </ol>
-            <a class="btn btn-primary w-100" data-toggle="collapse" href="#filter" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-primary w-100" data-toggle="collapse" href="#filter" role="button" aria-expanded="false" aria-controls="filter">
                 Filtre <i class="fas fa-angle-down ml-1" aria-hidden="true"></i>
             </a>
             <div class="collapse bg-secondary" id="filter">
@@ -53,7 +53,7 @@ $loop = new WP_Query( $args );
                 <ul class="list-unstyled mb-0 list-group list-group-flush text-center">
                     <li><a class="list-group-item bg-secondary text-uppercase" href="<?php the_permalink(); ?>">Tout afficher</a></li>
                     <?php foreach($types as $type): ?>
-                    <li><a class="list-group-item bg-secondary text-uppercase" href="<?php the_permalink(); echo '&filter=' . $type->term_id ?>"><?= $type->name ?></a></li> 
+                    <li><a class="list-group-item bg-secondary text-uppercase <?php if($type->term_id == $_GET['filter']){echo 'active';}; ?>" href="<?= add_query_arg( 'filter', $type->term_id ); ?>"><?= $type->name ?></a></li> 
                     <?php endforeach; ?>
                 </ul>
             </div>

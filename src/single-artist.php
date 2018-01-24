@@ -36,7 +36,7 @@
                 <address class="mx-auto mt-3">
                     <?php while ( have_rows('artist_contacts') ) : the_row(); ?>
                     <?php $type = get_sub_field('artist_contact_type'); ?>
-                    <span class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
                         <div class="text-primary col-2 mr-2">
                             <i class="fa fa-<?= $type['value']; ?>" aria-hidden="true"></i>
                         </div>
@@ -44,7 +44,7 @@
                         <div>
                             <?php the_sub_field('artist_contact_value') ?>
                         </div>
-                    </span>
+                    </div>
                     <?php endwhile; ?>
                 </address>
                 <?php endif; ?>
