@@ -6,6 +6,9 @@ get_header();
 if (!isset($_GET['filter'])) {
     $_GET['filter'] = 'null';
 }
+if (!isset($_GET['day'])) {
+    $_GET['day'] = 'null';
+}
 $args = array( 
     'post_type'         => 'event',
     'posts_per_page'    => -1,
@@ -31,13 +34,13 @@ $loop = new WP_Query( $args );
         <div>
             <ol class="list-unstyled d-flex mb-2">
                 <li class="col bg-primary">
-                    <a class="text-light text-center d-block pt-2 pb-2" href="#">Ven. 28</a>
+                    <a class="text-light text-center d-block pt-2 pb-2" href="<?= add_query_arg( 'date', '28' ); ?>">Ven. 28</a>
                 </li>
                 <li class="col bg-primary">
-                    <a class="text-light text-center d-block pt-2 pb-2" href="#">Sam. 29</a>
+                    <a class="text-light text-center d-block pt-2 pb-2" href="<?= add_query_arg( 'date', '29' ); ?>">Sam. 29</a>
                 </li>
                 <li class="col bg-primary">
-                    <a class="text-light text-center d-block pt-2 pb-2" href="#">Dim. 30</a>
+                    <a class="text-light text-center d-block pt-2 pb-2" href="<?= add_query_arg( 'date', '30' ); ?>">Dim. 30</a>
                 </li>
             </ol>
             <a class="btn btn-primary w-100" data-toggle="collapse" href="#filter" role="button" aria-expanded="false" aria-controls="filter">
@@ -66,9 +69,11 @@ $loop = new WP_Query( $args );
         </div>
         <ol class="list-unstyled container mt-4 d-flex flex-wrap">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); $artists = get_field('event_artists'); ?>
+            <?php if(sla_is_the_day(get_field('event_start'), get_field('event_end'), $_GET['date']) || $_GET['filter'] === null): ?>
             <li class="mb-4 col-12 col-md-6 col-lg-4">
                 <?php get_template_part( 'part', 'event' ); ?>
             </li>
+            <?php endif; ?>
             <?php endwhile; ?>
         </ol>
     </div>

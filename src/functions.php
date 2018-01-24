@@ -303,3 +303,35 @@ function sla_get_human_event_date($time) {
 function sla_the_human_event_date($time) {
     echo sla_get_human_event_date($time);
 }
+
+function sla_get_event_day($start, $end) {
+    $indexStart = strpos($start, ' ');
+    $start = substr($start, $indexStart + 1, 2);
+
+    $indexEnd = strpos($end, ' ');
+    $end = substr($end, $indexEnd + 1, 2);
+
+    $start = intval($start);
+    $end = intval($end);
+
+    if($start + 1 !== $end && $start !== $end) {
+        return ['28', '29', '30'];
+    }
+
+    return [$start, $end];
+}
+
+function sla_is_the_day($start, $end, $filter) {
+    $days = sla_get_event_day($start, $end);
+    $filter = intval($filter);
+
+    $isTheDay = false;
+
+    foreach($days as $day) {
+        if($day === $filter) {
+            $isTheDay = true;
+        }
+    }
+
+    return $isTheDay;
+}
