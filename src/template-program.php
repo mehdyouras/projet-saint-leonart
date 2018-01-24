@@ -6,8 +6,8 @@ get_header();
 if (!isset($_GET['filter'])) {
     $_GET['filter'] = 'null';
 }
-if (!isset($_GET['day'])) {
-    $_GET['day'] = 'null';
+if (!isset($_GET['date'])) {
+    $_GET['date'] = null;
 }
 $args = array( 
     'post_type'         => 'event',
@@ -69,7 +69,7 @@ $loop = new WP_Query( $args );
         </div>
         <ol class="list-unstyled container mt-4 d-flex flex-wrap">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); $artists = get_field('event_artists'); ?>
-            <?php if(sla_is_the_day(get_field('event_start'), get_field('event_end'), $_GET['date']) || $_GET['filter'] === null): ?>
+            <?php if($_GET['date'] === null || sla_is_the_day(get_field('event_start'), get_field('event_end'), $_GET['date'])): ?>
             <li class="mb-4 col-12 col-md-6 col-lg-4">
                 <?php get_template_part( 'part', 'event' ); ?>
             </li>
