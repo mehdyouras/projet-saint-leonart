@@ -6,7 +6,7 @@
             <?php 
                 $args = array( 
                     'post_type'         => 'artist',
-                    'posts_per_page'    => 4,
+                    'posts_per_page'    => 6,
                     'orderby'			=> 'rand');
                     $artists = new WP_Query( $args );
                     ?>

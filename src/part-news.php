@@ -4,5 +4,5 @@
     <p class="mb-2">
         <?php the_field('news_excerpt'); ?>
     </p>
-    <a class="btn p-0" href="<?php the_permalink(); ?>" class="readmore"><i class="fas fa-angle-right mr-1" aria-hidden="true"></i>Lire plus</a>
+    <a href="<?php the_permalink(); ?>" class="readmore btn p-0"><i class="fas fa-angle-right mr-1" aria-hidden="true"></i>Lire plus</a>
 </article>

@@ -14,7 +14,7 @@
                     $is_active = sla_is_active($item->link, $current_url);
                 ?>
                     <li class="nav-item<?php if($is_active) : ?>active<?php endif; ?>">
-                        <a class="nav-link" href="<?= $item->link ?>"><?= $item->label ?></a>
+                        <a class="nav-link <?php if(sla_is_active($item->link, get_permalink())){echo 'active';}; ?>" href="<?= $item->link ?>"><?= $item->label ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
